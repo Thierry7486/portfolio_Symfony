@@ -2,4 +2,10 @@
 
 {% block body %}
 <h1>Home</h1>
+
+quelques unes de nos compétences :
+
+{% for skill in skills %}
+<p>{{ skill.title }}</p>
+{% endfor %}
 {% endblock %}
