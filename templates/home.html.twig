@@ -1,11 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1>Home</h1>
 
-quelques unes de nos compétences :
+	<div class="w-full h-2/5 bg-red-500 rounded-xl shadow-lg border-gray-200 flex items-center">
+		<div class="pl-32 h-full items-center flex justify-center">
+			<img class="object-fill rounded-full" src="./images/man-2975272_1280.png" alt="pelo">
+		</div>
+		<div class="px-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iste nisi eum ea doloremque molestiae tempore debitis, dolor odio ducimus minus laborum fugit numquam molestias. Autem esse blanditiis est nihil.
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iste nisi eum ea doloremque molestiae tempore debitis, dolor odio ducimus minus laborum fugit numquam molestias. Autem esse blanditiis est nihil.
+		</div>
+	</div>
+	<p class="my-6 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quidem repellendus assumenda praesentium. Eligendi totam et suscipit minima, similique nobis id obcaecati? Rerum, dolorem deserunt modi magnam totam exercitationem impedit?</p>
+	<p class="my-6 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quidem repellendus assumenda praesentium. Eligendi totam et suscipit minima, similique nobis id obcaecati? Rerum, dolorem deserunt modi magnam totam exercitationem impedit?</p>
+	<p class="my-6 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quidem repellendus assumenda praesentium. Eligendi totam et suscipit minima, similique nobis id obcaecati? Rerum, dolorem deserunt modi magnam totam exercitationem impedit?</p>
+	<div class="flex w-full justify-center items-center">
+	{% for skill in skills %}
+		<a href="{{ path('show_skill', {id: skill.id}) }}">
+		<img class="w-32 h-32 rounded-full mx-12" src="{{ skill.image }}" alt="{{ skill.title }}">
+		</a>
+	{% endfor %}
+	</div>
 
-{% for skill in skills %}
-<p>{{ skill.title }}</p>
-{% endfor %}
+
 {% endblock %}

@@ -5,3 +5,15 @@
 home:
   path: /
   controller: App\Controller\HomeController::indexAction
+
+show_skill:
+  path: /skill/{id}/show
+  controller: App\Controller\SkillController::showAction
+
+show_techno:
+  path: /techno/{id}/show
+  controller: App\Controller\TechnoController::showAction
+
+show_category:
+  path: /category/{id}/show
+  controller: App\Controller\CategoryController::showAction

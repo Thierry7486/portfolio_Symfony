@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h3 class="font-bold text-center text-blue-700 uppercase my-12 text-xl">{{ techno.title }}</h3>
+{# <h4> Technos liées : {% for techno in skill.technos %} 
+<a href="{{ path('show_techno', {id: techno.id}) }}">
+{{ techno.title }}
+</a>
+{% endfor %}</h4> #}
+<p class="mb-12">{{ techno.content }}</p>
+<div class="w-full">
+<img class="rounded-md  w-full object-fill" src="{{ techno.image }}" alt="{{ techno.title }}">
+</div>
+
+{% endblock %}
