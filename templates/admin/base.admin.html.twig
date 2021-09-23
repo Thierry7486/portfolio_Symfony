@@ -10,16 +10,23 @@
             {#{{ encore_entry_link_tags('app') }}#}
         {% endblock %}
 
-        {% block javascripts %}
-           {# {{ encore_entry_script_tags('app') }} #}
-        {% endblock %}
+     
     </head>
-    <body class="h-full flex-col">
-        {{ render(controller(
-        'App\\Controller\\Partials\\NavbarController::indexAction',
-    )) }}
-        <div class="px-24 mt-12 h-full">
-        {% block body %}{% endblock %}
+    <body class="h-full flex w-full flex-row">
+
+        <div class="w-1/6 h-full bg-gray-200 flex flex-col">
+            {% include "admin/partials/_sidenav.html.twig" %}
         </div>
+        <div class="w-5/6 h-full bg-green-200 flex flex-col">
+            {% block body %}{% endblock %}
+        </div>
+
+
+        
+        
+	{% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+    {% endblock %}
+        
     </body>
 </html>

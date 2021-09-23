@@ -2,7 +2,11 @@
 
 {% block body %}
 
-<h3>{{ skill.title }}</h3>
+<h3 class="font-bold text-center text-blue-700 uppercase my-12 text-xl">{{ skill.title }}</h3>
+
+<div class="w-full">
+<img class="rounded-md  w-full object-fill" src="{{ skill.image }}" alt="{{ skill.title }}">
+</div>
 {% if skill.technos | length > 0 %}
 <h4> Technos liées : {% for techno in skill.technos %} 
 <a class="hover:underline" href="{{ path('show_techno', {id: techno.id}) }}">

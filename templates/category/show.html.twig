@@ -1,1 +1,15 @@
-coucou les loulous
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h3>{{ category.title }}</h3>
+{% if category.technos | length > 0 %}
+<h4> Technos liées : {% for techno in category.technos %} 
+<a class="hover:underline" href="{{ path('show_techno', {id: techno.id}) }}">
+{{ techno.title }}
+</a>
+{% endfor %}</h4>
+{% endif %}
+
+
+{% endblock %}
